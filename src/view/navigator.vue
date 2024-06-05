@@ -8,6 +8,8 @@
     <p>yaolaoming值：{{ yaolaoming }}</p>
 
     <button>按钮</button>
+    <br>
+    <button class="test-button">测试按钮</button>
   </div>
 </template>
 
@@ -33,3 +35,11 @@ const bbb = debounce(() => console.log(yaolaoming.value), 2000)
 //   console.log('err=======>',err)
 // })
 </script>
+
+<style>
+.test-button {
+  margin: auto;
+  display: block;
+  outline: 2px dotted lightpink;
+}
+</style>
