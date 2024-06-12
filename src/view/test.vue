@@ -2,7 +2,7 @@
   <div class="box">
     小测试：人名:{{ state.name }}???
   </div>
-  <button @click="btn">按钮</button>
+  <button @click="btn">继续测试</button>
 
 </template>
 
