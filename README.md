@@ -6,3 +6,8 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 
 - [VS Code](https://code.visualstudio.com/) + [Vue - Official](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (previously Volar) and disable Vetur
 首次提交文件
+
+
+## 插件文档
+unplugin-vue-components：https://github.com/unplugin/unplugin-vue-components#installation
+unplugin-auto-import：https://github.com/unplugin/unplugin-auto-import?tab=readme-ov-file#install

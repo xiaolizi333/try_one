@@ -1,0 +1,151 @@
+body {
+  --box-shadow-color-danger-dark: 0 0 0 1px var(--el-color-danger-dark) inset;
+}
+
+textarea {
+  font-family: inherit;
+  padding: 4px 8px;
+  box-sizing: border-box;
+  width: 100%;
+  border: none;
+  box-shadow: 0 0 0 1px var(--el-border-color) inset;
+  color: var(--el-text-color-regular);
+  outline: none;
+  // 去除textarea标签自带的拖动效果
+  resize: none;
+  // 在一行放不下的情况，将整个单词换行
+  overflow-wrap: break-word;
+  line-height: 1.5;
+  transition-duration: var(--el-transition-duration);
+
+  &:hover,
+  &:focus {
+    transition-duration: var(--el-transition-duration);
+    box-shadow: 0 0 0 1px var(--el-color-danger-dark) inset;
+  }
+
+  &::placeholder {
+    font-weight: larger;
+    color: var(--el-color-info-light-3);
+  }
+
+  &.disabled {
+    &:hover,
+    &:focus {
+      box-shadow: 0 0 0 1px var(--el-border-color) inset;
+
+    }
+  }
+}
+
+//虚拟化选择器(加上特定的类：textarea样式才生效)
+.el-select.el-select-textarea {
+  .el-select__wrapper {
+    border: none;
+    border-radius: var(--el-border-radius-big);
+    box-shadow: 0 0 0 1px var(--el-border-color) inset;
+    align-items: baseline;
+
+    &:hover,
+    &.is-focused {
+      box-shadow: var(--box-shadow-color-danger-dark);
+    }
+
+    .el-select__selection {
+      margin: 0;
+      // align-items: baseline;
+    }
+  }
+}
+
+.el-popper.el-select__popper {
+  border-radius: var(--el-border-radius-big);
+
+  .el-select-dropdown {
+    .el-select-dropdown__list {
+      div {
+        li {
+          border-radius: var(--el-border-radius-big);
+          left: 12px !important;
+          width: calc(100% - 24px) !important;
+          color: var(--el-text-color-regular);
+          &::after{
+            background-color: var(--el-color-info)
+          }
+        }
+      }
+    }
+  }
+}
+
+// 级联选择器
+.el-cascader {
+  .el-input {
+    &.is-focus {
+      .el-input__wrapper {
+        &.is-focus {
+          box-shadow: var(--box-shadow-color-danger-dark);
+        }
+      }
+    }
+
+    .el-input__wrapper {
+      border-radius: var(--el-border-radius-big);
+      box-shadow: 0 0 0 1px var(--el-input-hover-border-color) inset;
+    }
+  }
+}
+
+// 级联选择器的option
+.el-cascader__dropdown {
+  border-radius: var(--el-border-radius-big);
+  padding: 8px 0;
+
+  .el-cascader-node {
+    border-radius: var(--el-border-radius-big);
+    margin-right: 8px;
+
+    &.is-active {
+      color: var(--el-color-danger-dark);
+    }
+  }
+}
+
+// 再次确认弹窗
+.confirm-box {
+  padding: 20px;
+  border-radius: var(--el-border-radius-big);
+
+  .el-message-box__header {
+    padding: 0 0 12px;
+  }
+
+  .el-message-box__btns {
+    .el-button {
+      border-radius: var(--el-border-radius-big);
+      border: 0;
+
+      // 取消按钮的类跟样式
+      &.cancel-button {
+        background-color: var(--el-fill-color-dark);
+
+        &:hover {
+          color: var(--el-text-color-regular);
+          background-color: var(--el-fill-color-darker);
+          border: 0;
+        }
+      }
+
+      // 确认按钮的类跟样式
+      &.confirm-button {
+        background-color: var(--el-color-danger-dark);
+
+        &:hover {
+          background-color: var(--el-color-danger-light-1);
+          border: 0;
+        }
+      }
+    }
+
+  }
+}

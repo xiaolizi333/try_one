@@ -1,0 +1,7 @@
+:root {
+  --el-color-danger-light-1: #ff7385;
+  --el-color-danger-dark: #ff5967;
+  --el-border-radius-regular: 5px;
+  --el-border-radius-big: 10px;
+  --el-transition-duration-default: 0.5s
+}
